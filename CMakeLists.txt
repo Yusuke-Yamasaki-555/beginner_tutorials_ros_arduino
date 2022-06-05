@@ -144,6 +144,7 @@ add_executable(talker_node src/talker.cpp)
 add_executable(listener_node src/listener.cpp)
 add_executable(talker_arduino_node src/talker_arduino.cpp)
 add_executable(motor_arduino_node src/motor_arduino.cpp)
+add_executable(ToF_I2C_distance-sensor_arduino_node src/ToF_I2C_distance-sensor_arduino.cpp)
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
 ## target back to the shorter version for ease of user use
@@ -159,6 +160,7 @@ target_link_libraries(talker_node ${catkin_LIBRARIES})
 target_link_libraries(listener_node ${catkin_LIBRARIES})
 target_link_libraries(talker_arduino_node ${catkin_LIBRARIES})
 target_link_libraries(motor_arduino_node ${catkin_LIBRARIES})
+target_link_libraries(ToF_I2C_distance-sensor_arduino_node ${catkin_LIBRARIES})
 # add_dependencies(talker_node ${catkin_EXPORTED_TARGETS})
 # add_dependencies(listener_node ${catkin_EXPORTED_TARGETS})
 # add_dependencies(talker_arduino_node ${catkin_EXPORTED_TARGETS})

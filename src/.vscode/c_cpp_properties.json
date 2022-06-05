@@ -1,0 +1,29 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${workspaceFolder}/.vscode/browse.vc.db",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/yusuke-yamasaki/catkin_ws/devel/include/**",
+        "/opt/ros/noetic/include/**",
+        "/home/yusuke-yamasaki/catkin_ws/src/beginner_tutorials/include/**",
+        "/home/yusuke-yamasaki/catkin_ws/src/crane_x7_ros/crane_x7_control/include/**",
+        "/home/yusuke-yamasaki/catkin_ws/src/intelligent_robot_b_2022/include/**",
+        "/home/yusuke-yamasaki/catkin_ws/src/publisher/include/**",
+        "/home/yusuke-yamasaki/catkin_ws/src/roboticsgroup_gazebo_plugins/include/**",
+        "/home/yusuke-yamasaki/catkin_ws/src/ros_test/include/**",
+        "/home/yusuke-yamasaki/catkin_ws/src/rosserial/rosserial_server/include/**",
+        "/home/yusuke-yamasaki/catkin_ws/src/rosserial/rosserial_test/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}
