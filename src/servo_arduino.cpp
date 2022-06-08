@@ -3,10 +3,11 @@
 #include <stdio.h>
 
 std_msgs::Int32 msg;
+std_msgs::Int32 hoge;
 
 void servoCallback(const std_msgs::Int32& msg)
 {
-    printf("Now servo: [%d]", msg.data);
+    printf("Now servo: [%d]\n", msg.data);
 }
 
 int main(int argc, char **argv)
@@ -17,10 +18,17 @@ int main(int argc, char **argv)
 
     ros::Publisher servo_pub = n.advertise<std_msgs::Int32>("dir_ang", 1000);
 
-    ros::Rate loop_rate(10);
+    ros::Rate loop_rate(100);
+
+    ros::Subscriber servo_sub = n.subscribe("now_ang", 1000, servoCallback);
 
     while(ros::ok()){
-        ros::Subscriber servo_sub = n.subscribe("now_ang", 1000, servoCallback);
+        printf("hoge");
+        ros::spinOnce();
+        sleep(1000);
+    }
+
+    while(ros::ok()){
 
         msg.data = rand() % 180 + 1;
 
