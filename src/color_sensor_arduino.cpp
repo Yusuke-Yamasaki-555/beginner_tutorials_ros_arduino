@@ -5,11 +5,10 @@
 
 #include <ros/ros.h>
 #include <std_msgs/Int32.h>
-// #include "message/ColorRGB"
+// #include "message/ColorRGB" こういう書き方で良いかは知らん
 
 // SUBSCRIBER
-
-// void colorCallback(){}
+// void colorCallback(const <ココに型定義>& sub_color_msg){}
 
 int main(int argc, char **argv)
 {
