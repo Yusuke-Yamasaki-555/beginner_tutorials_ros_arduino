@@ -1,7 +1,12 @@
+/*License
+    SPDX-License-Identifier:MIT
+    Copyright (C) 2022 Yusuke Yamasaki. All Rights Reserved.
+*/
+
 // エンコーダについては、まだよくわかっていないところがある。要学習
 
-#include <ros/ros.h>
-#include <std_msgs/Int32.h>
+#include "ros/ros.h"
+#include "std_msgs/Int32.h"
 
 // SUBSCRIBER
 // void encoderCallback(const std_msgs::Int32& sub_encoder_msg){}
