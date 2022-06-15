@@ -17,6 +17,7 @@ find_package(catkin REQUIRED COMPONENTS
   roscpp
   rospy
   std_msgs
+  message_generation
 )
 
 ## System dependencies are found with CMake's conventions
@@ -53,11 +54,12 @@ find_package(catkin REQUIRED COMPONENTS
 ##   * add every package in MSG_DEP_SET to generate_messages(DEPENDENCIES ...)
 
 ## Generate messages in the 'msg' folder
-# add_message_files(
-#   FILES
+ add_message_files(
+   FILES
+   Data4.msg
 #   Message1.msg
 #   Message2.msg
-# )
+ )
 
 ## Generate services in the 'srv' folder
 # add_service_files(
@@ -74,10 +76,10 @@ find_package(catkin REQUIRED COMPONENTS
 # )
 
 ## Generate added messages and services with any dependencies listed here
-# generate_messages(
-#   DEPENDENCIES
-#   std_msgs
-# )
+ generate_messages(
+   DEPENDENCIES
+   std_msgs
+ )
 
 ################################################
 ## Declare ROS dynamic reconfigure parameters ##
@@ -111,7 +113,7 @@ find_package(catkin REQUIRED COMPONENTS
 catkin_package(
 #  INCLUDE_DIRS include
 #  LIBRARIES beginner_tutorials
-#  CATKIN_DEPENDS roscpp rospy std_msgs
+  CATKIN_DEPENDS roscpp rospy std_msgs message_runtime
 #  DEPENDS system_lib
 )
 
@@ -140,12 +142,14 @@ include_directories(
 ## With catkin_make all packages are built within a single CMake context
 ## The recommended prefix ensures that target names across packages don't collide
 # add_executable(${PROJECT_NAME}_node src/beginner_tutorials_node.cpp)
-add_executable(talker_node src/talker.cpp)
-add_executable(listener_node src/listener.cpp)
-add_executable(talker_arduino_node src/talker_arduino.cpp)
+# add_executable(talker_node src/talker.cpp)
+# add_executable(listener_node src/listener.cpp)
+# add_executable(talker_arduino_node src/talker_arduino.cpp)
 add_executable(motor_arduino_node src/motor_arduino.cpp)
 add_executable(ToF_I2C_distance-sensor_arduino_node src/ToF_I2C_distance-sensor_arduino.cpp)
 add_executable(servo_arduino_node src/servo_arduino.cpp)
+add_executable(color_sensor_arduino_node src/color_sensor_arduino.cpp)
+add_executable(encoder_arduino_node src/encoder_arduino.cpp)
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
 ## target back to the shorter version for ease of user use
@@ -157,12 +161,14 @@ add_executable(servo_arduino_node src/servo_arduino.cpp)
 # add_dependencies(${PROJECT_NAME}_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
 ## Specify libraries to link a library or executable target against
-target_link_libraries(talker_node ${catkin_LIBRARIES})
-target_link_libraries(listener_node ${catkin_LIBRARIES})
-target_link_libraries(talker_arduino_node ${catkin_LIBRARIES})
+# target_link_libraries(talker_node ${catkin_LIBRARIES})
+# target_link_libraries(listener_node ${catkin_LIBRARIES})
+# target_link_libraries(talker_arduino_node ${catkin_LIBRARIES})
 target_link_libraries(motor_arduino_node ${catkin_LIBRARIES})
 target_link_libraries(ToF_I2C_distance-sensor_arduino_node ${catkin_LIBRARIES})
 target_link_libraries(servo_arduino_node ${catkin_LIBRARIES})
+target_link_libraries(encoder_arduino_node ${catkin_LIBRARIES})
+target_link_libraries(color_sensor_arduino_node ${catkin_LIBRARIES})
 # add_dependencies(talker_node ${catkin_EXPORTED_TARGETS})
 # add_dependencies(listener_node ${catkin_EXPORTED_TARGETS})
 # add_dependencies(talker_arduino_node ${catkin_EXPORTED_TARGETS})

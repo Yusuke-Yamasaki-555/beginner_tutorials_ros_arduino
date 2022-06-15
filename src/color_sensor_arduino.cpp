@@ -14,7 +14,7 @@
 
 // SUBSCRIBER
 // void colorCallback(const <ココに型定義>& sub_color_msg){}
-
+/*
 int main(int argc, char **argv)
 {
     ros::init(argc, argv, "color_sensor");
@@ -27,3 +27,4 @@ int main(int argc, char **argv)
 
     return 0;
 }
+*/

@@ -10,7 +10,7 @@
 
 // SUBSCRIBER
 // void encoderCallback(const std_msgs::Int32& sub_encoder_msg){}
-
+/*
 int main(int argc, char **argv)
 {
     ros::init(argc, argv, "encoder");
@@ -23,3 +23,4 @@ int main(int argc, char **argv)
 
     return 0;
 }
+*/
