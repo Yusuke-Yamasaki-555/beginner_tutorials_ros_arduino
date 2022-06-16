@@ -149,7 +149,7 @@ add_executable(motor_arduino_node src/motor_arduino.cpp)
 add_executable(ToF_I2C_distance-sensor_arduino_node src/ToF_I2C_distance-sensor_arduino.cpp)
 add_executable(servo_arduino_node src/servo_arduino.cpp)
 add_executable(color_sensor_arduino_node src/color_sensor_arduino.cpp)
-# add_executable(encoder_arduino_node src/encoder_arduino.cpp)
+add_executable(encoder_arduino_node src/encoder_arduino.cpp)
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
 ## target back to the shorter version for ease of user use
@@ -168,7 +168,7 @@ target_link_libraries(motor_arduino_node ${catkin_LIBRARIES})
 target_link_libraries(ToF_I2C_distance-sensor_arduino_node ${catkin_LIBRARIES})
 target_link_libraries(servo_arduino_node ${catkin_LIBRARIES})
 target_link_libraries(color_sensor_arduino_node ${catkin_LIBRARIES})
-# target_link_libraries(encoder_arduino_node ${catkin_LIBRARIES})
+target_link_libraries(encoder_arduino_node ${catkin_LIBRARIES})
 # add_dependencies(talker_node ${catkin_EXPORTED_TARGETS})
 # add_dependencies(listener_node ${catkin_EXPORTED_TARGETS})
 # add_dependencies(talker_arduino_node ${catkin_EXPORTED_TARGETS})

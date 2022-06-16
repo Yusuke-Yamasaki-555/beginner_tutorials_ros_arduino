@@ -3,24 +3,24 @@
     Copyright (C) 2022 Yusuke Yamasaki. All Rights Reserved.
 */
 
-// エンコーダについては、まだよくわかっていないところがある。要学習
-
 #include "ros/ros.h"
 #include "std_msgs/Int32.h"
+#include "beginner_tutorials/Data4.h"
 
-// SUBSCRIBER
-// void encoderCallback(const std_msgs::Int32& sub_encoder_msg){}
-/*
+void encoderCallback(const beginner_tutorials::Data4 &sub_encoder_msg)
+{
+    ROS_INFO("ENCODER_DATA : L[ %u ], R[ %u ]", sub_encoder_msg.data1, sub_encoder_msg.data2);
+}
+
 int main(int argc, char **argv)
 {
     ros::init(argc, argv, "encoder");
 
-    ros NodeHandle n;
+    ros::NodeHandle n;
 
-    ros::Subscriber sub_color = n.subscribe("encoder_msg", 10, encoderCallback);
+    ros::Subscriber sub_encoder = n.subscribe("encoder_msg", 10, encoderCallback);
 
     ros::spin();
 
     return 0;
 }
-*/
