@@ -9,7 +9,7 @@
 
 void encoderCallback(const beginner_tutorials::Data4 &sub_encoder_msg)
 {
-    ROS_INFO("ENCODER_DATA : L[ %u ], R[ %u ]", sub_encoder_msg.data1, sub_encoder_msg.data2);
+    ROS_INFO("ENCODER_DATA : L[ %d ], R[ %d ]", sub_encoder_msg.data1, sub_encoder_msg.data2);
 }
 
 int main(int argc, char **argv)
