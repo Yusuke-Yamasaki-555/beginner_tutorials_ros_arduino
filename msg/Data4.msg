@@ -1,4 +1,4 @@
-int32 data1
-int32 data2
-int32 data3
-int32 data4
+uint16 data1
+uint16 data2
+uint16 data3
+uint16 data4
